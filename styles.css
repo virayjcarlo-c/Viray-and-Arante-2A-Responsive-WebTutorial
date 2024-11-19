@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('c:/Users/USER/Desktop/images.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #f7f0f0; 
+    line-height: 1.6; 
+}
+
+.container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    flex: 5; 
+    min-height: 300px; 
+    max-width: 700px; 
+    margin: auto; 
+    padding: 20px; 
+    background: rgba(131, 43, 247, 0.9); 
+    border-radius: 6px; 
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.9); 
+}
+
+header {
+    background: rgba(74, 144, 226, 0.8); 
+    color: #ffffff; 
+    padding: 20px 0;
+    text-align: center; 
+}
+
+
+nav {
+    margin: 20px 0; /
+}
+
+nav a {
+    margin: 0 15px; 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+nav a:hover {
+    color: #ffcc00; 
+}
+
+footer {
+    text-align: center; 
+    padding: 15px 0; 
+    background: rgba(53, 66, 74, 0.8); 
+    color: #ffffff; 
+}
+
+.container p {
+    margin-bottom: 20px; 
+}
+
+#toggleButton {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgba(74, 144, 226, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

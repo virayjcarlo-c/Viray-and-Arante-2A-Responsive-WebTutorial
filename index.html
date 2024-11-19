@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS, JavaScript Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>HTML, CSS, JavaScript Tutorial</h1>
+</header>
+
+<nav>
+    <center>
+        <a href="#html">HTML Basics</a>
+        <a href="#css">CSS Basics</a>
+        <a href="#javascript">JavaScript Basics</a>
+    </center>
+</nav>
+
+<div class="container">
+    <section id="html">
+        <h2><a href="https://www.youtube.com/watch?v=qz0aGYrrlhU" target="_blank">HTML Basics</a></h2>
+        <p>HTML stands for HyperText Markup Language, and it is the standard markup language for creating web pages.</p>
+    </section>
+    <section id="css">
+        <h2><a href="https://www.youtube.com/watch?v=wRNinF7YQqQ" target="_blank">CSS Basics</a></h2>
+        <p>CSS stands for Cascading Style Sheets, and it describes how HTML elements are to be displayed on screen.</p>
+    </section>
+    <section id="javascript">
+        <h2><a href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank">JavaScript Basics</a></h2>
+        <p>JavaScript is a programming language that enables you to create dynamically updating content, control multimedia, animate images, and much more.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Tutorial Website</p>
+</footer>
+
+<script>
+    
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    document.querySelectorAll('.container section').forEach(section => {
+        section.addEventListener('click', function(e) {
+            if (e.target.tagName !== 'A') {
+                alert('You clicked on: ' + this.querySelector('h2').innerText);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
